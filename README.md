@@ -1,7 +1,32 @@
+name: Update Space Shooter Game
+
+on:
+  shedule:
+   - cron: '0 0 * * *' # Daily at midnight UTC
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-game:
+    runs-on: Ubunto_latest
+    steps:
+      - uses: actions/checkout@v?
+
+      - uses: cz19707/gh-space-shooter@v1
+        whith:
+        github-token: ${{ secres.GITHUB
+        output-patch "game.gif"
+        strategy: 'ramdom'
+ 
+
+
+
 # Learning-Proyects
 Small coding projects while learning and having fun.
 
-# 👋 About me 
+# 👋 About me
 
 🐍 Python:
 - Basics
@@ -19,3 +44,4 @@ Small coding projects while learning and having fun.
 - Small personel projects
 
 Learning in public. 💻🛜📚
+
