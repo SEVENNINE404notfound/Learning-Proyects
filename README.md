@@ -1,7 +1,7 @@
 name: Update Space Shooter Game
 
 on:
-  shedule:
+  schedule:
    - cron: '0 0 * * *' # Daily at midnight UTC
   workflow_dispatch: # Allow manual trigger
 
@@ -10,15 +10,15 @@ permissions:
 
 jobs:
   update-game:
-    runs-on: Ubunto_latest
+    runs-on: Ubuntu_latest
     steps:
-      - uses: actions/checkout@v?
+      - uses: actions/checkout@v4
 
       - uses: cz19707/gh-space-shooter@v1
-        whith:
-        github-token: ${{ secres.GITHUB
-        output-patch "game.gif"
-        strategy: 'ramdom'
+        with:
+        github-token: ${{ secrets.GITHUB
+        output-path "game.gif"
+        strategy: 'random'
  
 
 
